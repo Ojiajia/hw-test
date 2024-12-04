@@ -6,10 +6,10 @@ import (
 	"io"
 	"os"
 
-	"github.com/fixme_my_friend/hw02_fix_app/types"
+	"github.com/Ojiajia/hw-test/tree/hw02_fix_app/hw02_fix_app/types"
 )
 
-func ReadJSON(filePath string, limit int) ([]types.Employee, error) {
+func ReadJSON(filePath string) ([]types.Employee, error) {
 	f, err := os.Open(filePath)
 	if err != nil {
 		fmt.Printf("Error: %v", err)
@@ -29,13 +29,12 @@ func ReadJSON(filePath string, limit int) ([]types.Employee, error) {
 		vsbyten,
 		&data,
 	)
-
 	if err != nil {
 		fmt.Printf("Error: %v", err)
 		return nil, err
 	}
 
-	//res := data
+	// res := data
 
 	return data, err
 }

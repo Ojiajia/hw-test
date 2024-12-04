@@ -3,20 +3,19 @@ package main
 import (
 	"fmt"
 
-	"github.com/fixme_my_friend/hw02_fix_app/printer"
-	"github.com/fixme_my_friend/hw02_fix_app/reader"
-	"github.com/fixme_my_friend/hw02_fix_app/types"
+	"github.com/Ojiajia/hw-test/tree/hw02_fix_app/hw02_fix_app/printer"
+	"github.com/Ojiajia/hw-test/tree/hw02_fix_app/hw02_fix_app/reader"
+	"github.com/Ojiajia/hw-test/tree/hw02_fix_app/hw02_fix_app/types"
 )
 
 func main() {
-
 	// либо это:
 	path := "data.json"
 
 	// либо это:
 
-	//fmt.Printf("Enter data file path: ")
-	//fmt.Scanln(&path)
+	// fmt.Printf("Enter data file path: ")
+	// fmt.Scanln(&path)
 
 	var err error
 	var staff []types.Employee
@@ -25,7 +24,7 @@ func main() {
 		path = "data.json"
 	}
 
-	staff, err = reader.ReadJSON(path, -1)
+	staff, err = reader.ReadJSON(path)
 
 	fmt.Print(err)
 
