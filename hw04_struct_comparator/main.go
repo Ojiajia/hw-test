@@ -117,5 +117,3 @@ func main() {
 	CompData.ToCompare(BookOne, BookTwo)
 
 }
-
-//
