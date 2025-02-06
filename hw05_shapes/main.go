@@ -16,7 +16,7 @@ func (r Rectangle) CalcArea() int {
 	return r.A * r.B
 }
 */
-****
+//****
 
 type Circle struct { // круг
 	R float32 // R - радиус
