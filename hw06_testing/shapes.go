@@ -1,4 +1,4 @@
-package main
+package shapes
 
 import (
 	"fmt"
@@ -35,8 +35,23 @@ func CallInterface(a Area) {
 	print(a.CalcArea())
 }
 
+func init() {
+	fmt.Println("Hello from init hw05_shapes!")
+}
+
+func New(text string) error {
+	return &errorString{text}
+   }
+   type errorString struct {
+	s string
+   }
+   func (e *errorString) Error() string {
+	return e.s
+   }
+
 func main() {
 
+	
 	var c Circle
 	c.R = 3.
 	print("Circle Area = ")
@@ -50,7 +65,7 @@ func main() {
 
 	var r Rectangle
 	r.A = 5.
-	r.B = 1000000000000000000000000000000000000000
+	r.B = 4.
 	print("\nRectangle Area = ")
 	CallInterface(r)
 
